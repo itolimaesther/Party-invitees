@@ -5,7 +5,8 @@ function Lists( { people }: IProps) {
 
     const renderList = (): JSX.Element[] => {
         return people.map((person, i) => {
-            <li key={i}>
+            return (
+                <li key={i}>
                 <div className="header">
                     <img src={person.url} alt="person" />
                     <h3>{person.name}</h3>
@@ -13,6 +14,7 @@ function Lists( { people }: IProps) {
                 <p>{person.age} years old</p>
                 <p>{person.note}</p>
             </li>
+            )
         })
     }
 
