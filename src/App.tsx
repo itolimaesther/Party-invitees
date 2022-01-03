@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import  List  from '././components/List';
+import AddtoList from './components/AddtoList/AddtoList';
+import  Lists  from './components/Lists/Lists';
 
 
 
@@ -20,7 +21,7 @@ function App() {
     {
       name: 'Max',
       age: 28,
-      url: 'https://randomuser.me/api/portraits/',
+      url: 'https://cdn.pixabay.com/photo/2021/04/25/14/30/man-6206540_1280.jpg',
       note: 'I am ready to party',
     }
   ]);
@@ -28,8 +29,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>People invited for the party </h1>
-      <List people={people}/>
+      <h1 className='header'>People invited for the party </h1>
+      <Lists people={people}/>
+
+      <AddtoList/>
     </div>
   );
 }

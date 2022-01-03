@@ -1,0 +1,12 @@
+.addtolist{
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 26px;
+}
+
+.addtolist>input, .addtolist>textarea, .addtolist>button{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
