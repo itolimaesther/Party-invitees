@@ -8,7 +8,7 @@ import  Lists  from './components/Lists/Lists';
 export interface IState {
   people: {
     name: string;
-    age: number;
+    age: string;
     url: string;
     note?: string;
   }[]
@@ -20,7 +20,7 @@ function App() {
   const [people, setPeople] = useState<IState ["people"]>([
     {
       name: 'Max',
-      age: 28,
+      age: "28",
       url: 'https://cdn.pixabay.com/photo/2021/04/25/14/30/man-6206540_1280.jpg',
       note: 'I am ready to party',
     }
@@ -32,7 +32,7 @@ function App() {
       <h1 className='header'>People invited for the party </h1>
       <Lists people={people}/>
 
-      <AddtoList/>
+      <AddtoList people={people} setPeople={setPeople} />
     </div>
   );
 }
